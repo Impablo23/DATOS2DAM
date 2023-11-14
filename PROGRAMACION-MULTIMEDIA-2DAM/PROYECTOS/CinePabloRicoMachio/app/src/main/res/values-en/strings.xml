@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CinePabloRicoMachio</string>
+    <string name="app_creada">Application created by Pablo Rico Machío</string>
+    <string name="btn_sitio_web">Go to website</string>
+    <string name="btn_obtener_soporte">Get Support</string>
+    <string name="btn_volver">Return</string>
+    <string name="aviso_tostada">Unimplemented Functionality</string>
+    <string name="alarma">Activate alarm at 11:30 am</string>
+    <string name="alarmaOK">Alarm at 11:30 activated correctly</string>
+</resources>

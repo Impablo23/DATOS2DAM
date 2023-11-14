@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CinePabloRicoMachio</string>
+    <string name="app_creada">Aplicacion Creada Por Pablo Rico Machío</string>
+    <string name="btn_sitio_web">Ir Al Sitio Web</string>
+    <string name="btn_obtener_soporte">Obtener Soporte</string>
+    <string name="btn_volver">Volver</string>
+    <string name="aviso_tostada">Funcionalidad sin Implementar</string>
+    <string name="alarma">Activar alarma a las 11:30 am</string>
+    <string name="alarmaOK">Alarma a las 11:30 activada correctamente</string>
+</resources>
