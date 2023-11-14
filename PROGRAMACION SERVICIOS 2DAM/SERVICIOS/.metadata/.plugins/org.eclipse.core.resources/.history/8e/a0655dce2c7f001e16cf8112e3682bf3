@@ -1,0 +1,35 @@
+package EjercicioHilos;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Pedido {
+	
+	private LinkedList<String> lista = new LinkedList<>();
+	
+	synchronized public void agregarPedido(String pedido1,String pedido2) {
+        lista.add(pedido1);
+        lista.add(pedido2);
+    	notifyAll();
+    }
+	
+	synchronized public String retirarProducto() {
+        if (!lista.isEmpty()) {
+            String producto = lista.removeFirst();
+            return producto;
+        } else {
+        	try {
+				wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            return null;
+            }
+    }
+    
+    public boolean isEmpty() {
+    	return productos.isEmpty();
+    }
+
+}

@@ -1,0 +1,51 @@
+package EjercicioFilosofos;
+
+public class Filosofo {
+	
+	private int numFilosofo;
+	private int tenedorDerecha;
+	private int tenedorIzquierda;
+	
+	
+	public Filosofo(int numFilosofo, int tenedorDerecha, int tenedorIzquierda) {
+		super();
+		this.numFilosofo = numFilosofo;
+		this.tenedorDerecha = tenedorDerecha;
+		this.tenedorIzquierda = tenedorIzquierda;
+	}
+
+
+	public int getNumFilosofo() {
+		return numFilosofo;
+	}
+
+
+	public void setNumFilosofo(int numFilosofo) {
+		this.numFilosofo = numFilosofo;
+	}
+
+
+	public int getTenedorDerecha() {
+		return tenedorDerecha;
+	}
+
+
+	public void setTenedorDerecha(int tenedorDerecha) {
+		this.tenedorDerecha = tenedorDerecha;
+	}
+
+
+	public int getTenedorIzquierda() {
+		return tenedorIzquierda;
+	}
+
+
+	public void setTenedorIzquierda(int tenedorIzquierda) {
+		this.tenedorIzquierda = tenedorIzquierda;
+	}
+	
+	
+	
+	
+
+}

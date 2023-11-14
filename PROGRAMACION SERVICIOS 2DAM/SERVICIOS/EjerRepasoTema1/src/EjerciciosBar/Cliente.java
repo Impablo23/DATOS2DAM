@@ -1,0 +1,30 @@
+package EjerciciosBar;
+
+
+public class Cliente implements Runnable{
+	
+	public Productos producto;
+	public String nombre;
+	public String nuevoProducto;
+	
+	public Cliente(Productos producto,String nombre) {
+		this.producto=producto;
+		this.nombre=nombre;
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 5; i++) {
+			nuevoProducto=ProductosRamdoms.generateRandomString(1);
+            producto.agregarProducto(nuevoProducto);
+	        System.out.println("Cliente " + nombre + ", ha pedido " + nuevoProducto);
+	        try {
+	            Thread.sleep((long) (Math.random() * 700));
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+        }
+	}
+
+}

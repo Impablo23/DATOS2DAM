@@ -1,0 +1,26 @@
+package EjercicioFilosofos;
+
+public class CenaFilosofos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Tenedor[] tenedores = new Tenedor[5];
+        for (int i = 0; i < 5; i++) {
+            tenedores[i] = new Tenedor();
+            System.out.println(tenedores[i]);
+        }
+
+        Thread[] filosofos = new Thread[5];
+        for (int i = 0; i < 5; i++) {
+            filosofos[i] = new Thread(new Filosofo(tenedores[i], tenedores[(i + 1) % 5]), "Filósofo " + (i + 1));
+        }
+
+        for (Thread filosofo : filosofos) {
+            filosofo.start();
+        }
+		
+
+	}
+
+}

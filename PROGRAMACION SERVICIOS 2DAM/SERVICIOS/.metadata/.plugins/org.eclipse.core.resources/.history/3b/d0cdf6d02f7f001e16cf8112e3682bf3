@@ -1,0 +1,24 @@
+package EjercicioHilos;
+
+public class GestionCola {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cola cola= new Cola();
+		AgregaPedidos unoA=new AgregaPedidos(cola);
+		EliminaPedido unoE=new EliminaPedido(cola);
+		AgregaPedidos dosA=new AgregaPedidos(cola);
+		EliminaPedido dosE=new EliminaPedido(cola);
+		
+		Thread a=new Thread(unoA);
+		Thread b=new Thread(unoE);
+		Thread c=new Thread(dosA);
+		Thread d=new Thread(dosE);
+		a.start();
+		b.start();
+		c.start();
+		d.start();
+
+	}
+
+}

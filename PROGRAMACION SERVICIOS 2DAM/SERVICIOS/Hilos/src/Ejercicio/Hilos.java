@@ -1,0 +1,24 @@
+package Ejercicio;
+
+public class Hilos{
+	
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		
+		//Creamos 4 ratones con sus respectivos atributos que inserto yo
+		Raton uno= new Raton("Nico",3);
+		Raton dos= new Raton("Ivan",2);
+		Raton tres= new Raton("Pablo",1);
+		Raton cuatro= new Raton("Antonio",4);
+		
+		
+		//Iniciamos los hilos
+		uno.start();
+		dos.start();
+		tres.start();
+		cuatro.start();
+		
+
+	}
+
+}

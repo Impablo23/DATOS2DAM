@@ -1,0 +1,26 @@
+package Saludos;
+
+class Empleado extends Thread {
+    private String nombre;
+    private Saludo saludo;
+    private boolean esJefe;
+
+    public Empleado(String nombre, Saludo saludo, boolean esJefe) {
+        this.nombre = nombre;
+        this.saludo = saludo;
+        this.esJefe = esJefe;
+    }
+
+    @Override
+    public void run() {
+        if (esJefe) {
+            saludo.saludarComoJefe(nombre);
+        } else {
+            saludo.esperarSaludo(nombre);
+        }
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+}

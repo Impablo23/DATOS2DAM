@@ -1,0 +1,53 @@
+package EjercicioFilosofos;
+
+public class Filosofo implements Runnable{
+	
+	private Tenedor tenedorIzquierdo;
+    private Tenedor tenedorDerecho;
+    private static int contador=0;
+
+    public Filosofo(Tenedor izquierdo, Tenedor derecho) {
+        this.tenedorIzquierdo = izquierdo;
+        this.tenedorDerecho = derecho;
+    }
+
+    //Metodo que hace que los hilos no empiezen al mismo tiempo
+    private void pensar() throws InterruptedException {
+        System.out.println(Thread.currentThread().getName() + " está pensando.");
+        Thread.sleep((int) (Math.random() * 1000));
+    }
+
+    //Metodo que toma los tenedores, muestra un mensaje de que estan comiendo y cuando terminan sueltan los tenedores y avisa a los demas de que ha terminado
+    private void comer() throws InterruptedException {
+        tenedorIzquierdo.tomar();
+        tenedorDerecho.tomar();
+
+        System.out.println(Thread.currentThread().getName() + " está comiendo.");
+        Thread.sleep((int) (Math.random() * 1000));
+
+        System.out.println(Thread.currentThread().getName()+" HA TERMINADO DE COMER Y SUS TENEDORES ESTAN LIBRES :) \n ");
+        tenedorIzquierdo.soltar();
+        tenedorDerecho.soltar();
+        contador++;
+        
+    }
+    
+    
+    //Metodo run que ejecuta los metodos pensar y comer
+    public void run() {
+        try {
+            while (true || contador<10) {
+                pensar();
+                comer();
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+	
+	
+	
+	
+	
+
+}

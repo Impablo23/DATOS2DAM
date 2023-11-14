@@ -1,0 +1,14 @@
+package EjercicioHilos;
+
+import java.util.ArrayList;
+
+public class Pedido {
+	
+	private ArrayList<String> lista= new ArrayList<>();
+	
+	synchronized public void agregarPedido(String pedido) {
+        lista.add(producto);
+    	notifyAll();
+    }
+
+}

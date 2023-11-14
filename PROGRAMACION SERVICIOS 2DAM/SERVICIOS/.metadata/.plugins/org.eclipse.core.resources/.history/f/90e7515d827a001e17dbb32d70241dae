@@ -1,0 +1,19 @@
+package EjerciciosBar;
+
+public class Camarero {
+	
+	private int numCliente;
+	private int numPedido;
+	
+	
+	public Camarero(int numCliente, int numPedido) {
+		super();
+		this.numCliente = numCliente;
+		this.numPedido = numPedido;
+	}
+	
+	
+	
+	
+
+}

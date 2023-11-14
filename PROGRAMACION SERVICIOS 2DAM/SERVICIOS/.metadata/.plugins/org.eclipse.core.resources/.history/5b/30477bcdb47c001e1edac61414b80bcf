@@ -1,0 +1,17 @@
+package EjercicioFilosofos;
+
+public class CenaFilosofos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Filosofo uno= new Filosofo(1,5,1);
+		Filosofo dos= new Filosofo(1,1,2);
+		Filosofo tres= new Filosofo(1,2,3);
+		Filosofo cuatro= new Filosofo(1,3,4);
+		Filosofo cinco= new Filosofo(1,4,5);
+		
+
+	}
+
+}

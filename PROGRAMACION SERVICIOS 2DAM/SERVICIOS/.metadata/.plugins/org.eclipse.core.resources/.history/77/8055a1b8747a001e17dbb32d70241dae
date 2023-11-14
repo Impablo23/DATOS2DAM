@@ -1,0 +1,22 @@
+package Ejercicios;
+
+public class Vehiculo extends Thread{
+	
+	public String nombre;
+	public int distancia;
+	
+	
+	public Vehiculo(String nombre, int distancia) {
+		super();
+		this.nombre = nombre;
+		this.distancia = distancia;
+	}
+	
+	public void run() {
+		for(int i=0;i<distancia;i++) {
+			
+		}
+	}
+	
+	
+}

@@ -1,0 +1,30 @@
+package EjercicioHilos;
+
+
+
+public class AgregaPedidos implements Runnable{
+	public Cola producto;
+	public String nombre;
+	public String nuevoPedido1;
+	
+	
+	public AgregaPedidos(Cola producto) {
+		this.producto=producto;
+		this.nombre="DAM";
+	}
+	
+	public void run() {
+		// TODO Auto-generated method stub
+		for (int i = 1; i < 5; i++) {
+			nuevoPedido1=PedidosRamdoms.generateRandomString(i);
+            producto.agregarPedido(nuevoPedido1);
+	        System.out.println("A la cola " + nombre + " se han agregado los pedidos " + nuevoPedido1);
+	        try {
+	            Thread.sleep((long) (Math.random() * 700));
+	        } catch (InterruptedException e) {
+	            e.printStackTrace();
+	        }
+        }
+	}
+
+}

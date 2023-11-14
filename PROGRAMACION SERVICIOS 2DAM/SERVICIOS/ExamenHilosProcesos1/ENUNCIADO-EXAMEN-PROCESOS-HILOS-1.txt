@@ -1,0 +1,23 @@
+1.-  Procesos:
+A)programa java donde se envíe 1 paquete de ping (datagrama)  a un sitio de internet que escribamos como argumento.  
+
+Si hay eco de respuesta entonces abriremos el navegador con ese URL y en caso contrario abriremos el block de notas con un fichero txt con el nombre del sitio.  ( 3 puntos)
+
+B) Haz un cronograma donde cómo van cambiando de estado los tres procesos del apartado A)  P ej, una tabla donde salgan por un lado los procesos y por otro el tiempo, indicando en cada celda el estado.  (1 pto) 
+
+C) Describe los procesos creados desde el punto de vista del sistema operativo, comentando sus principales características con alguna utilidad del sistema para monitorizar los procesos. (1 pto)
+
+HILOS
+
+2.- Crea un programa donde se gestione una COLA de pedidos, usando  un proceso que va vaciando el primer pedido que entró, y 2 procesos que crean los pedidos apuntándolos al final de la cola.  Para simplificar, pondremos en el pedido un nombre de artículo solamente.
+
+La clase Cola será la que tengamos que escribir a prueba de hilos, mediante sincronismo.
+
+A) Planteamiento del problema correcto (2,5 ptos.)
+
+B) Se comenta el código para comprender las partes críticas y se establecen funciones y métodos correctamente (1pto)
+C) Por último, añadimos al código que los procesos trabajen en bucle, con cierto retraso para poder monitorizarlos. 
+
+Al realizar un pedido se informa del puesto del pedido en la cola.
+
+Al servir el pedido se informa del siguiente en ser servido.  (1,5 ptos)

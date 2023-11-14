@@ -1,0 +1,20 @@
+package EjercicioFilosofos;
+
+public class Tenedor {
+	
+	private boolean disponible=true;
+	
+	//Metodo sincroizado que cambia la disponibilidad del tenedor para que no puedan seguir los demas filosofos hasta que tengan los tenedores disponibles
+	public synchronized void tomar() throws InterruptedException {
+        while (!disponible) {
+            wait();
+        }
+        disponible = false;
+    }
+
+    public synchronized void soltar() {
+        disponible = true;
+        notifyAll();
+    }
+
+}

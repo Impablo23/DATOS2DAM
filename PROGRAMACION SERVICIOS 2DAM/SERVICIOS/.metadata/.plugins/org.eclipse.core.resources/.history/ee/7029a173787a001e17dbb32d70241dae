@@ -1,0 +1,29 @@
+package Ejercicios;
+
+public class Alumno extends Thread{
+	
+	public String nombre;
+	public int tiempoComerPlato;
+	
+	
+	public Alumno(String nombre, int tiempoComerPlato) {
+		this.nombre = nombre;
+		this.tiempoComerPlato = tiempoComerPlato;
+	}
+	
+	public void run() {
+		for(int i=1;i<4;i++) {
+			try {
+				System.out.println(nombre+" se zampa el plato "+i+"\n");
+				Thread.sleep(500*tiempoComerPlato);
+			}catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println(nombre+" ha terminado de comer :)\n");
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,29 @@
+package Ejercicios;
+
+public class ProductorConsumidor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Creamos una lista
+		Lista l = new Lista(10);
+		//creamos productores y consumidores
+        Productor p1= new Productor(l);
+        Productor p2 = new Productor(l);
+        Consumidor c1 = new Consumidor(l);
+        Consumidor c2 = new Consumidor(l);
+        Consumidor c3 = new Consumidor(l);
+        //Inicia los Hilos
+        try {
+             
+            p1.start();
+            p2.start();
+            c1.start();
+            c2.start();
+            c3.start();
+         
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+	}
+
+}

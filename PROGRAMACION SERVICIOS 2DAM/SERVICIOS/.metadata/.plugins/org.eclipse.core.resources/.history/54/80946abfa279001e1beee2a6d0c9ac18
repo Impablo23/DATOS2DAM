@@ -1,0 +1,16 @@
+package Ejercicios;
+
+public class AlmuerzoEscolar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Alumno uno= new Alumno("pablo",4);
+		Alumno dos= new Alumno("ivan",2);
+		
+		uno.start();
+		dos.start();
+
+	}
+
+}

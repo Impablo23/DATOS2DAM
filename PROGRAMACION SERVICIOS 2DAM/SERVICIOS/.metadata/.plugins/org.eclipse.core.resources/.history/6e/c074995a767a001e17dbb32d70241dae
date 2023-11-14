@@ -1,0 +1,13 @@
+package Ejercicios;
+
+public class AlmuerzoEscolar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		alumnos=new String["pablo","nico","ivan","paco","ismael","ricardo","mario","sebas","alejandro","javier"];
+		String alumnos=new String[];
+
+	}
+
+}

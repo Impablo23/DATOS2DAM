@@ -1,0 +1,12 @@
+package EjercicioFilosofos;
+
+public class CenaFilosofos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Filosofo uno= new Filosofo(1,1,5);
+
+	}
+
+}

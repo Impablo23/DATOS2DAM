@@ -1,0 +1,12 @@
+package EjercicioHilos;
+
+public class GestionCola {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cola cola= new Cola();
+		AgregaPedidos uno=new AgregaPedidos(cola);
+
+	}
+
+}

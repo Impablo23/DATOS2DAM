@@ -1,0 +1,34 @@
+package Hilos3Ejer;
+
+import java.lang.Thread.State;
+
+public class EjerObj {
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		int tiempo=1;
+		State actual=null;
+		
+		
+		Raton uno= new Raton("Nico",1);
+		//Mostrado el estado del hilo
+		System.out.println("Estado del raton Nico: "+uno.getState());
+		uno.start();
+		//Hacemos un bucle mostrando los estados hasta que salga terminated
+		while(uno.getState()!=Thread.State.TERMINATED) {
+			if(actual!=uno.getState()) {
+				System.out.println("Estado del raton Nico: "+uno.getState());
+				actual=uno.getState();
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

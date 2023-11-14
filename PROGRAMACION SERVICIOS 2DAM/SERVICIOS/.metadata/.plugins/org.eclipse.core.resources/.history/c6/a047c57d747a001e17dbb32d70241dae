@@ -1,0 +1,7 @@
+package Ejercicios;
+
+public class Vehiculo extends Thread{
+	
+	public String nombre;
+	public int distatncia;
+}

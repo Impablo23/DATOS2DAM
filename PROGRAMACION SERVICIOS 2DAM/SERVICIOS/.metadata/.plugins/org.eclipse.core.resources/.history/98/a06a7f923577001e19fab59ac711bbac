@@ -1,0 +1,16 @@
+package Saludos;
+
+public class Empresa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Empleado uno=new Empleado("pablo",false);
+		Empleado dos=new Empleado("nico",false);
+		Empleado tres=new Empleado("sebas",false);
+		Empleado cuatro= new Empleado("laura",)
+		
+
+	}
+
+}

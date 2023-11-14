@@ -1,0 +1,39 @@
+package EjercicioHilos;
+
+
+
+public class EliminaPedido {
+	
+	public Cola producto;
+	public String nombre;
+	public String productoRetirado=null;
+	
+	public EliminaPedido(Cola producto) {
+		this.producto=producto;
+		this.nombre="DAM";
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String texto;
+		while(true) {
+			productoRetirado = producto.retirarProducto();
+			texto = (productoRetirado != null) ? ", ha atendido " +productoRetirado : " esperando comandas";
+			System.out.println("Camarero " + nombre + texto);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

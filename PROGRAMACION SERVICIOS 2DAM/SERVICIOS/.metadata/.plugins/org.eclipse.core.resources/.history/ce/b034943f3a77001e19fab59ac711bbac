@@ -1,0 +1,18 @@
+package Saludos;
+
+class Saludo {
+	synchronized void saludar(Empleado persona) {
+        if (persona.isEsJefe()) {
+            System.out.println("****** JEFE-: Buenos días empleados. ******");
+            notifyAll();
+            System.out.println(persona.getNombre() + "-: Buenos días jefe.");
+        } else {
+            System.out.println(persona.getNombre() + "-: Buenos días jefe.");
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

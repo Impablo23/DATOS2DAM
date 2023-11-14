@@ -1,0 +1,69 @@
+package Saludos;
+
+public class Empleado {
+	
+	public String nombre;
+	public boolean esJefe;
+	
+	
+	public Empleado(String nombre, boolean esJefe) {
+		
+		this.nombre = nombre;
+		
+		this.esJefe = esJefe;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	
+
+
+	public boolean isEsJefe() {
+		return esJefe;
+	}
+
+
+	public void setEsJefe(boolean esJefe) {
+		this.esJefe = esJefe;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Empleado [nombre=" + nombre+", esJefe=" + esJefe + "]";
+	}
+	
+	public void run() {
+		llegar();
+	}
+	
+	private synchronized void llegar() {
+		if(this.esJefe==false) {
+			try {
+				wait();
+				System.out.println(this.nombre+"llego.");
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+		}else {
+			System.out.println(this.nombre+"llego.");
+			notifyAll();
+		}
+		
+	}
+	
+	
+	
+	
+
+}

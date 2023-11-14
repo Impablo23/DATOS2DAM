@@ -1,0 +1,26 @@
+package Ejercicio;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class EntradaSalida {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		//Esta línea crea un nuevo proceso ejecutando el comando "cmd /c dir" en la línea de comandos del sistema operativo. El comando dir se utiliza para mostrar el contenido del directorio actual en sistemas Windows.
+		Process pr=Runtime.getRuntime().exec("cmd /c dir");
+		
+		InputStream in= pr.getInputStream();
+		BufferedReader br= new BufferedReader(new InputStreamReader(in));
+		String lin;
+		System.out.println("Listado del proceso padre");
+		while ((lin= br.readLine()) != null) {
+			System.out.println(lin);
+		}
+
+	}
+
+}

@@ -1,0 +1,44 @@
+package Ejercicios;
+
+import java.util.ArrayList;
+
+public class AlmuerzoEscolar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Creamos lista para almacenar nombres
+		ArrayList<String> alumnos= new ArrayList<String>(10);
+		annadeNombres(alumnos);
+		//Creamos lista para almacenar alumnos
+		ArrayList<Alumno> listado=new ArrayList<Alumno>(10);
+		//Recorremos los nombres para añadirlo a un alumno con su tiempo para comer aleatorio
+		for (String s : alumnos) {
+			Alumno alumno=new Alumno(s.toString(),(int) (Math.random()*10));
+			listado.add(alumno);
+			
+		}
+		
+		//Inicia el hilo
+		for (Alumno a : listado) {
+			a.start();
+		}
+		
+
+	}
+	
+	public static void annadeNombres(ArrayList<String> alumnos) {
+		alumnos.add("pablo");
+		alumnos.add("nico");
+		alumnos.add("ivan");
+		alumnos.add("sebas");
+		alumnos.add("paco");
+		alumnos.add("isma");
+		alumnos.add("ale");
+		alumnos.add("mario");
+		alumnos.add("ricardo");
+		alumnos.add("javi");
+	}
+	
+	
+
+}

@@ -1,0 +1,36 @@
+package ProductoresYConsumidores;
+
+public class Camarero implements Runnable{
+	public Productos producto;
+	public String nombre;
+	public String productoRetirado=null;
+	
+	public Camarero(Productos producto,String nombre) {
+		this.producto=producto;
+		this.nombre=nombre;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String texto;
+		while(true) {
+			productoRetirado = producto.retirarProducto();
+			texto = (productoRetirado != null) ? ", ha atendido " +productoRetirado : " esperando comandas";
+			System.out.println("Camarero " + nombre + texto);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+}

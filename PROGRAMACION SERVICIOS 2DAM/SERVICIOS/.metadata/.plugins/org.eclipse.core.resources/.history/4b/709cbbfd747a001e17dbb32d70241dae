@@ -1,0 +1,12 @@
+package Ejercicios;
+
+public class RecorridoTransportes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Vehiculo auto=new Vehiculo("auto",5);
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package EjercicioProcesos;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Procesos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input= new Scanner(System.in);
+		String chrome="C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe";
+		String ip="";
+		String url="https://"+ip;
+		System.out.println("Introduce una ip: ");
+		try {
+			//Añadimos el args[0] para que cuando ejecutamos en jar en el cmd y apliquemos un comnado se le añada en al metodo proceso
+			//El argumento args[0] se pone para poner el comando en el cmd con el .jar
+			Process pro= Runtime.getRuntime().exec("ping -n l "+ip);
+			int exitV=pro.waitFor();
+			if(exitV==0) {
+				System.out.println("Comando Correcto :)");
+				System.out.println(exitV);
+			}else {
+				System.out.println("Comando Incorrecto :(");
+				System.out.println(exitV);
+			}
+			
+			
+		}catch(IOException e) {
+			System.out.println("Error: "+e.getMessage());
+		}
+
+	}
+
+}

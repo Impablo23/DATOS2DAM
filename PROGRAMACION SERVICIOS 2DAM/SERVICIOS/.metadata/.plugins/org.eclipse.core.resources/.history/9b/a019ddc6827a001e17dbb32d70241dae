@@ -1,0 +1,13 @@
+package EjerciciosBar;
+
+public class Camarero {
+	
+	public synchronized void atenderCliente(Cliente cliente, String producto) {
+        System.out.println("Camarero atiende a " + cliente.getNombre() + " su pedido: " + producto);
+    }
+	
+	
+	
+	
+
+}

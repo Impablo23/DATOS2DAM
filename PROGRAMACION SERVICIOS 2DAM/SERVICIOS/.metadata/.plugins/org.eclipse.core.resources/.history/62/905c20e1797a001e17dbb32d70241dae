@@ -1,0 +1,18 @@
+package Ejercicios;
+
+public class RecorridoTransportes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Vehiculo auto=new Vehiculo("auto",5);
+		Vehiculo moto=new Vehiculo("moto",7);
+		Vehiculo patinete=new Vehiculo("patinete",2);
+		
+		auto.start();
+		moto.start();
+		patinete.start();
+
+	}
+
+}

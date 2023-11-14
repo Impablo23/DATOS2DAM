@@ -1,0 +1,25 @@
+package Saludos;
+
+public class Empresa {
+	
+	
+	    public static void main(String[] args) {
+	        Saludo s = new Saludo();
+	        Empleado empleado1 = new Empleado("Pepe", s, false);
+	        Empleado empleado2 = new Empleado("José", s, false);
+	        Empleado empleado3 = new Empleado("Pedro", s, false);
+	        Empleado jefe1 = new Empleado("JEFE", s, true);
+
+	        try {
+	        	empleado1.start();
+		        empleado2.start();
+		        empleado3.start();
+		        jefe1.start();
+	        }catch(Exception e) {
+	        	e.printStackTrace();
+	        }
+	    }
+}
+	
+
+

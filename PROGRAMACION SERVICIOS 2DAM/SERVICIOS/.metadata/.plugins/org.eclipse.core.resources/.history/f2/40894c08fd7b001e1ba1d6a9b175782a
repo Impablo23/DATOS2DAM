@@ -1,0 +1,19 @@
+package EjerciciosBar;
+
+public class Cliente {
+	
+	private String nombre;
+
+    public Cliente(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public synchronized void realizarPedido(Camarero camarero, String producto) {
+        camarero.atenderCliente(this, producto);
+    }
+
+}

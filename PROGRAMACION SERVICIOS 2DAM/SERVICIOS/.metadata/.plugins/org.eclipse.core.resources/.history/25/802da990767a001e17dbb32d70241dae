@@ -1,0 +1,18 @@
+package Ejercicios;
+
+import java.util.ArrayList;
+
+public class AlmuerzoEscolar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+	
+	public static void annadeNombres(ArrayList<String> alumnos) {
+		alumnos.add("pablo");
+	}
+
+}

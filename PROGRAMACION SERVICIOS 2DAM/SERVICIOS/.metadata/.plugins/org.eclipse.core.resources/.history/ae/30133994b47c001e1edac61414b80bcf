@@ -1,0 +1,7 @@
+package EjercicioFilosofos;
+
+public class Tenedor {
+	
+	private boolean disponible=true;
+
+}

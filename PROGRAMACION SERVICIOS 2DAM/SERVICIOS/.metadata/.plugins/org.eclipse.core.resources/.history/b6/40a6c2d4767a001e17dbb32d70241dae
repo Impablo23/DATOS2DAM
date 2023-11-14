@@ -1,0 +1,31 @@
+package Ejercicios;
+
+import java.util.ArrayList;
+
+public class AlmuerzoEscolar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+	
+	public static void annadeNombres(ArrayList<String> alumnos) {
+		alumnos.add("pablo");
+		alumnos.add("nico");
+		alumnos.add("ivan");
+		alumnos.add("sebas");
+		alumnos.add("paco");
+		alumnos.add("isma");
+		alumnos.add("ale");
+		alumnos.add("mario");
+		alumnos.add("ricardo");
+		alumnos.add("javi");
+	}
+	
+	public static void annadeTiempor(ArrayList<Integer> tiempos) {
+		tiempos.add((int) Math.random()*5);
+	}
+
+}

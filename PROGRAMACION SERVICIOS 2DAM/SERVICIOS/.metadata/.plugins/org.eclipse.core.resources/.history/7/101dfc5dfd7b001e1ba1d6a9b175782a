@@ -1,0 +1,21 @@
+package EjerciciosBar;
+
+public class Bar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Camarero camarero = new Camarero();
+        Cliente cliente1 = new Cliente("Cliente 1");
+        Cliente cliente2 = new Cliente("Cliente 2");
+        Cliente cliente3 = new Cliente("Cliente 3");
+
+        String producto = "Hamburguesa";
+
+        cliente1.realizarPedido(camarero, producto);
+        cliente2.realizarPedido(camarero, producto);
+        cliente3.realizarPedido(camarero, producto);
+
+	}
+
+}

@@ -1,0 +1,55 @@
+package Ejercicios;
+
+import java.util.ArrayList;
+
+public class AlmuerzoEscolar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> alumnos= new ArrayList<String>(10);
+		annadeNombres(alumnos);
+		ArrayList<Integer> tiempos= new ArrayList<Integer>(10);
+		annadeTiempos(tiempos);
+		ArrayList<Alumno> listado=new ArrayList<Alumno>(10);
+		System.out.println((int) Math.random()*100);
+		for (Integer i : tiempos) {
+			System.out.println(i.toString());
+		}
+		
+		/*for (String s : alumnos) {
+			for (Integer i : tiempos) {
+				Alumno alumno=new Alumno(s.toString(),i.toString());
+			}
+		}*/
+		
+
+	}
+	
+	public static void annadeNombres(ArrayList<String> alumnos) {
+		alumnos.add("pablo");
+		alumnos.add("nico");
+		alumnos.add("ivan");
+		alumnos.add("sebas");
+		alumnos.add("paco");
+		alumnos.add("isma");
+		alumnos.add("ale");
+		alumnos.add("mario");
+		alumnos.add("ricardo");
+		alumnos.add("javi");
+	}
+	
+	public static void annadeTiempos(ArrayList<Integer> tiempos) {
+		tiempos.add(10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		tiempos.add((int) Math.random()*10);
+		
+	}
+
+}
