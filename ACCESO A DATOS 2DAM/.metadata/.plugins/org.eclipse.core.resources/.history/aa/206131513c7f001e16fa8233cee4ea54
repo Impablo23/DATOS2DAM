@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ConexionHibernate1 {
+	requires java.persistence;
+	requires org.hibernate.orm.core;
+}

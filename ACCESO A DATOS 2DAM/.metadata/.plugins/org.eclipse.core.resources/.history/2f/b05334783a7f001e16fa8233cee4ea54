@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ConexionHibernate1 {
+	requires java.persistence;
+}

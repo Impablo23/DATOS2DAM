@@ -1,0 +1,10 @@
+Datos del archivo: letras.txt
+A
+B
+C
+D
+Datos del archivo: numeros.txt
+1
+2
+3
+4
