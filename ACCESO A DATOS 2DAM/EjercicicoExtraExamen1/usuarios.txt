@@ -1,2 +1,0 @@
-pablo,hola123,pablo rico
-nico,nico123,nico rodriguez
