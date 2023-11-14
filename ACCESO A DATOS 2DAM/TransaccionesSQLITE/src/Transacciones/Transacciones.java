@@ -1,0 +1,51 @@
+package Transacciones;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Transacciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Connection conex=null;
+		Scanner input= new Scanner(System.in);
+		try {
+			conex=DriverManager.getConnection("jdbc:sqlite:base2.db");
+			System.out.println("Conexion SQLITE correcta :)");
+			System.out.println("RESTAURANTE PINOCHO");
+			BDTransacciones.printTablaExistencias(conex);
+			System.out.println();
+			int num=1;
+			while (num!=3) {
+				menuInteracivo();
+				num=input.nextInt();input.nextLine();
+				if(num==1) {
+					System.out.println("Dime el codigo del alimento que deseas pedir: ");
+					int cod=input.nextInt();input.nextLine();
+					System.out.println("Dime las unidades que deseas pedir: ");
+					int uni=input.nextInt();input.nextLine();
+					BDTransacciones.transaccion(conex, cod, uni);
+				}else if(num==2) {
+					BDTransacciones.printTablaPedidos(conex);
+				}
+			}
+			System.out.println("Gracias por usar la app del restaurante, que tengas buen día :)");
+			conex.close();
+		}catch(SQLException e) {
+			System.err.println(e.getMessage());
+		}
+
+	}
+	
+	public static void menuInteracivo() {
+		System.out.println("OPCIONES: ");
+		System.out.println("HACER UN PEDIDO (1)");
+		System.out.println("VER LOS PEDIDOS (2)");
+		System.out.println("SALIR (3)");
+		System.out.println("Seleccione la respuesta deseada:");
+	}
+
+}

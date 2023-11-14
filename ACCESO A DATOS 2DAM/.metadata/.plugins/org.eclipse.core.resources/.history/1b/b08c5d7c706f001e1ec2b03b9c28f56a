@@ -1,0 +1,32 @@
+package Transacciones;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class Transacciones {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Connection conex=null;
+		try {
+			conex=DriverManager.getConnection("jdbc:sqlite:transacciones.db");
+			System.out.println("Conexion SQLITE correcta :)");
+			System.out.println("RESTAURANTE PINOCHO");
+			BDTransacciones.printTablaExistencias(conex);
+			System.out.println();
+			menuInteracivo();
+		}catch(SQLException e) {
+			System.err.println(e.getMessage());
+		}
+
+	}
+	
+	public static void menuInteracivo() {
+		System.out.println("OPCIONES: ");
+		System.out.println("HACER UN PEDIDO (1)");
+		System.out.println("VER LOS ENVIOS (2)");
+		System.out.println("SALIR (3)");
+	}
+
+}
