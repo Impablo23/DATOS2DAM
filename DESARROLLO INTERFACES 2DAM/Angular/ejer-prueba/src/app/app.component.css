@@ -1,0 +1,12 @@
+body{
+  margin-left: 50px;
+}
+#original{
+  background-color: aqua;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+#componente{
+  background-color:rgb(188, 162, 212);
+  border-radius: 20px;
+}

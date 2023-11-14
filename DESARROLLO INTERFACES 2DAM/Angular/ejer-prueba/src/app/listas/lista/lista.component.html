@@ -1,0 +1,15 @@
+<dl>
+  <td>Nombre:</td>
+  <dd>El nombre del superhéroe es: {{getNombre}}</dd>
+  <br>
+  <td>Edad:</td>
+  <dd>La edad de {{getNombre}} es de {{getEdad}} años.</dd>
+  <br>
+  <td>Descripción</td>
+  <dd>{{descripcion()}}</dd>
+  <br>
+  <td>Nombre Capitalizado</td>
+  <dd>{{getNombreCapitalizado}}</dd>
+  <button (click)="cambiaNombre()">Cambiar Nombre</button>
+  <button (click)="cambiaEdad()">Cambiar Edad</button>
+</dl>

@@ -1,0 +1,28 @@
+<div class="card" >
+  <div id="foto" style="background-image: url({{logo}});width: 200px;height: 200px;"></div>
+  <div class="card-body">
+    <h1>{{centroEducativo.toLocaleUpperCase()}}</h1>
+    <dl>Centro Educativo:</dl>
+    <dd>{{centroEducativo}}</dd>
+    <dl>Localidad:</dl>
+    <dd>{{localidad}}</dd>
+    <dl>Familias Profesionales:</dl>
+    <dd>{{familiaProfesionales}}</dd>
+    <dl>CENTRO:</dl>
+    <dd>{{centroEducativo.toLocaleUpperCase()}}</dd>
+    <br>
+    <button  (click)="cambiaInstitutos()"  type="button" class="btn btn-outline-primary">Cambia de Centros</button>
+  </div>
+</div>
+<div id="ok">
+  <label for="customRange3" class="form-label">Rango de Satisfacción por el ejercicio :/</label>
+  <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+</div>
+
+
+
+
+
+
+
+
